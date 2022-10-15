@@ -60,6 +60,9 @@ func PureLink(u string) string {
 func main() {
 	var app App
 	_ = broccoli.BindOSArgs(&app)
+	if app.DB == "" {
+		app.DB = "./list"
+	}
 	initDB(app.DB)
 	defer closeDB()
 	switch {
