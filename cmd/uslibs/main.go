@@ -92,7 +92,7 @@ func main() {
 				return libs[i].ID < libs[j].ID
 			})
 			for _, lib := range libs {
-				w.WriteString(fmt.Sprintf("## %d. %s\n\n", lib.ID, lib.Name))
+				w.WriteString(fmt.Sprintf("## %05d. %s\n\n", lib.ID, lib.Name))
 				w.WriteString(fmt.Sprintf("URL: [%s](%s)\n\n", PureLink(lib.URL), lib.URL))
 				w.WriteString(fmt.Sprintf("%s\n\n", lib.Description))
 			}
