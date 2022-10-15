@@ -1,4 +1,6 @@
-# Library List
+# Go Masterpieces
+
+Masterpieces of Go programming language.
 
 ## 00000. rueian/rueidis
 

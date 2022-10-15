@@ -87,7 +87,8 @@ func main() {
 		} else if app.List.MARKDOWN {
 			w := bufio.NewWriter(os.Stdout)
 			defer w.Flush()
-			w.WriteString("# Library List\n\n")
+			w.WriteString("# Go Masterpieces\n\n")
+			w.WriteString("Masterpieces of Go programming language.\n\n")
 			sort.Slice(libs, func(i, j int) bool {
 				return libs[i].ID < libs[j].ID
 			})
