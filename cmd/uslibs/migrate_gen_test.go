@@ -9,8 +9,8 @@ import (
 	"github.com/tinylib/msgp/msgp"
 )
 
-func TestMarshalUnmarshalLibrary(t *testing.T) {
-	v := Library{}
+func TestMarshalUnmarshalDBConfig(t *testing.T) {
+	v := DBConfig{}
 	bts, err := v.MarshalMsg(nil)
 	if err != nil {
 		t.Fatal(err)
@@ -32,8 +32,8 @@ func TestMarshalUnmarshalLibrary(t *testing.T) {
 	}
 }
 
-func BenchmarkMarshalMsgLibrary(b *testing.B) {
-	v := Library{}
+func BenchmarkMarshalMsgDBConfig(b *testing.B) {
+	v := DBConfig{}
 	b.ReportAllocs()
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
@@ -41,8 +41,8 @@ func BenchmarkMarshalMsgLibrary(b *testing.B) {
 	}
 }
 
-func BenchmarkAppendMsgLibrary(b *testing.B) {
-	v := Library{}
+func BenchmarkAppendMsgDBConfig(b *testing.B) {
+	v := DBConfig{}
 	bts := make([]byte, 0, v.Msgsize())
 	bts, _ = v.MarshalMsg(bts[0:0])
 	b.SetBytes(int64(len(bts)))
@@ -53,8 +53,8 @@ func BenchmarkAppendMsgLibrary(b *testing.B) {
 	}
 }
 
-func BenchmarkUnmarshalLibrary(b *testing.B) {
-	v := Library{}
+func BenchmarkUnmarshalDBConfig(b *testing.B) {
+	v := DBConfig{}
 	bts, _ := v.MarshalMsg(nil)
 	b.ReportAllocs()
 	b.SetBytes(int64(len(bts)))
@@ -67,17 +67,17 @@ func BenchmarkUnmarshalLibrary(b *testing.B) {
 	}
 }
 
-func TestEncodeDecodeLibrary(t *testing.T) {
-	v := Library{}
+func TestEncodeDecodeDBConfig(t *testing.T) {
+	v := DBConfig{}
 	var buf bytes.Buffer
 	msgp.Encode(&buf, &v)
 
 	m := v.Msgsize()
 	if buf.Len() > m {
-		t.Log("WARNING: TestEncodeDecodeLibrary Msgsize() is inaccurate")
+		t.Log("WARNING: TestEncodeDecodeDBConfig Msgsize() is inaccurate")
 	}
 
-	vn := Library{}
+	vn := DBConfig{}
 	err := msgp.Decode(&buf, &vn)
 	if err != nil {
 		t.Error(err)
@@ -91,8 +91,8 @@ func TestEncodeDecodeLibrary(t *testing.T) {
 	}
 }
 
-func BenchmarkEncodeLibrary(b *testing.B) {
-	v := Library{}
+func BenchmarkEncodeDBConfig(b *testing.B) {
+	v := DBConfig{}
 	var buf bytes.Buffer
 	msgp.Encode(&buf, &v)
 	b.SetBytes(int64(buf.Len()))
@@ -105,8 +105,8 @@ func BenchmarkEncodeLibrary(b *testing.B) {
 	en.Flush()
 }
 
-func BenchmarkDecodeLibrary(b *testing.B) {
-	v := Library{}
+func BenchmarkDecodeDBConfig(b *testing.B) {
+	v := DBConfig{}
 	var buf bytes.Buffer
 	msgp.Encode(&buf, &v)
 	b.SetBytes(int64(buf.Len()))
@@ -122,8 +122,8 @@ func BenchmarkDecodeLibrary(b *testing.B) {
 	}
 }
 
-func TestMarshalUnmarshalTag(t *testing.T) {
-	v := Tag{}
+func TestMarshalUnmarshalMigration(t *testing.T) {
+	v := Migration{}
 	bts, err := v.MarshalMsg(nil)
 	if err != nil {
 		t.Fatal(err)
@@ -145,8 +145,8 @@ func TestMarshalUnmarshalTag(t *testing.T) {
 	}
 }
 
-func BenchmarkMarshalMsgTag(b *testing.B) {
-	v := Tag{}
+func BenchmarkMarshalMsgMigration(b *testing.B) {
+	v := Migration{}
 	b.ReportAllocs()
 	b.ResetTimer()
 	for i := 0; i < b.N; i++ {
@@ -154,8 +154,8 @@ func BenchmarkMarshalMsgTag(b *testing.B) {
 	}
 }
 
-func BenchmarkAppendMsgTag(b *testing.B) {
-	v := Tag{}
+func BenchmarkAppendMsgMigration(b *testing.B) {
+	v := Migration{}
 	bts := make([]byte, 0, v.Msgsize())
 	bts, _ = v.MarshalMsg(bts[0:0])
 	b.SetBytes(int64(len(bts)))
@@ -166,8 +166,8 @@ func BenchmarkAppendMsgTag(b *testing.B) {
 	}
 }
 
-func BenchmarkUnmarshalTag(b *testing.B) {
-	v := Tag{}
+func BenchmarkUnmarshalMigration(b *testing.B) {
+	v := Migration{}
 	bts, _ := v.MarshalMsg(nil)
 	b.ReportAllocs()
 	b.SetBytes(int64(len(bts)))
@@ -180,17 +180,17 @@ func BenchmarkUnmarshalTag(b *testing.B) {
 	}
 }
 
-func TestEncodeDecodeTag(t *testing.T) {
-	v := Tag{}
+func TestEncodeDecodeMigration(t *testing.T) {
+	v := Migration{}
 	var buf bytes.Buffer
 	msgp.Encode(&buf, &v)
 
 	m := v.Msgsize()
 	if buf.Len() > m {
-		t.Log("WARNING: TestEncodeDecodeTag Msgsize() is inaccurate")
+		t.Log("WARNING: TestEncodeDecodeMigration Msgsize() is inaccurate")
 	}
 
-	vn := Tag{}
+	vn := Migration{}
 	err := msgp.Decode(&buf, &vn)
 	if err != nil {
 		t.Error(err)
@@ -204,8 +204,8 @@ func TestEncodeDecodeTag(t *testing.T) {
 	}
 }
 
-func BenchmarkEncodeTag(b *testing.B) {
-	v := Tag{}
+func BenchmarkEncodeMigration(b *testing.B) {
+	v := Migration{}
 	var buf bytes.Buffer
 	msgp.Encode(&buf, &v)
 	b.SetBytes(int64(buf.Len()))
@@ -218,8 +218,8 @@ func BenchmarkEncodeTag(b *testing.B) {
 	en.Flush()
 }
 
-func BenchmarkDecodeTag(b *testing.B) {
-	v := Tag{}
+func BenchmarkDecodeMigration(b *testing.B) {
+	v := Migration{}
 	var buf bytes.Buffer
 	msgp.Encode(&buf, &v)
 	b.SetBytes(int64(buf.Len()))

@@ -26,6 +26,7 @@ type AddCmd struct {
 	Name        string   `flag:"name" about:"Name of the library" required:"true"`
 	URL         string   `flag:"url" about:"URL of the library" required:"true"`
 	Description string   `flag:"description" about:"Description of the library"`
+	Tags        string   `flag:"tags" about:"Tags of the library"`
 }
 
 type DelCmd struct {
@@ -69,7 +70,8 @@ func main() {
 	defer closeDB()
 	switch {
 	case app.Add != nil:
-		err := AddLibrary(app.Add.Name, app.Add.URL, app.Add.Description)
+		tags := strings.Split(app.Add.Tags, ",")
+		err := AddLibrary(app.Add.Name, app.Add.URL, app.Add.Description, tags...)
 		if err != nil {
 			panic(err)
 		}

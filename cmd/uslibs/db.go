@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"strconv"
+	"strings"
 
 	"github.com/dgraph-io/badger/v3"
 )
@@ -24,6 +25,8 @@ func initDB(path string) {
 	if err != nil {
 		panic(err)
 	}
+
+	migrate()
 }
 
 func closeDB() {
@@ -47,30 +50,62 @@ type Library struct {
 	Name        string
 	URL         string
 	Description string
+	Tags        []string
+}
+
+type Tag struct {
+	Name      string
+	Libraries []uint64
 }
 
 var _ = func() int {
 	return 0
 }()
 
-const LIBRARY_PREFIX = "library:"
-const URL_INDEX_PREFIX = "url:"
-const NAME_INDEX_PREFIX = "name:"
+const LIBRARY_PREFIX = "library:" // library:<id>  -> Library
+const URL_INDEX_PREFIX = "url:"   // url:<url>     -> <id>
+const NAME_INDEX_PREFIX = "name:" // name:<name>   -> <id>
+const TAG_PREFIX = "tag:"         // tag:<name>    -> Tag
+const CONFIG_PREFIX = "config:"   // config:<key> -> <value>
 
 func UintToStr(u uint64) string {
 	return string(strconv.FormatUint(u, 36))
 }
 
-func AddLibrary(name, url, description string) error {
+func AddLibrary(name, url, description string, tags ...string) error {
 	id, err := IDSeq.Next()
 	if err != nil {
 		return err
 	}
+
+	// Trim tags
+	for i, tag := range tags {
+		tags[i] = strings.Trim(tag, " ")
+		tags[i] = strings.ToTitle(tags[i])
+	}
+
+	// Unique tags
+	uniqueTags := make(map[string]bool)
+	var uniqueTagsSlice []string
+	for _, tag := range tags {
+		if _, ok := uniqueTags[tag]; !ok {
+			uniqueTags[tag] = true
+			uniqueTagsSlice = append(uniqueTagsSlice, tag)
+		}
+	}
+	tags = uniqueTagsSlice
+
+	// If tags == []string{""} then tags = []string{"Go"}
+	if len(tags) == 1 && tags[0] == "" {
+		tags = []string{"Go"}
+	}
+
 	library := Library{
 		ID:          id,
 		Name:        name,
 		URL:         url,
 		Description: description,
+		Tags:        tags,
 	}
 	data, err := library.MarshalMsg(nil)
 	if err != nil {
@@ -91,6 +126,34 @@ func AddLibrary(name, url, description string) error {
 		err = txn.Set([]byte(NAME_INDEX_PREFIX+name), []byte(UintToStr(id)))
 		if err != nil {
 			return err
+		}
+		// Tag index
+		for _, tag := range tags {
+			t, err := txn.Get([]byte(TAG_PREFIX + tag))
+			var tagData Tag
+			if err == nil {
+				err = t.Value(func(val []byte) error {
+					_, err := tagData.UnmarshalMsg(val)
+					if err != nil {
+						return err
+					}
+					return nil
+				})
+				if err != nil {
+					return err
+				}
+			}
+			tagData.Name = tag
+			tagData.Libraries = append(tagData.Libraries, id)
+			data, err := tagData.MarshalMsg(nil)
+			if err != nil {
+				return err
+			}
+
+			err = txn.Set([]byte(TAG_PREFIX+tag), data)
+			if err != nil {
+				return err
+			}
 		}
 		return nil
 	})
@@ -169,6 +232,30 @@ func DeleteLibrary(id uint64) error {
 			return err
 		}
 
+		// Delete Tag index
+		for _, tag := range library.Tags {
+			t, err := txn.Get([]byte(TAG_PREFIX + tag))
+			var tagData Tag
+			if err == nil {
+				err = t.Value(func(val []byte) error {
+					_, err := tagData.UnmarshalMsg(val)
+					if err != nil {
+						return err
+					}
+					return nil
+				})
+				if err != nil {
+					return err
+				}
+			}
+			// Remove library from tag
+			for i, libraryID := range tagData.Libraries {
+				if libraryID == id {
+					tagData.Libraries = append(tagData.Libraries[:i], tagData.Libraries[i+1:]...)
+					break
+				}
+			}
+		}
 		return nil
 	})
 	if err != nil {
