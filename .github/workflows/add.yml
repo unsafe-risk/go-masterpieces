@@ -1,0 +1,41 @@
+name: Add
+
+on:
+  workflow_dispatch:
+    inputs:
+      Name:
+        description: 'Name'
+        required: true
+        type: string
+      URL:
+        description: 'URL to the repository'
+        required: true 
+        type: string
+      Description:
+        description: 'Description'
+        required: true
+        type: string
+
+jobs:
+  add:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v3
+      with:
+        go-version: 1.19
+
+    - name: Install
+      run: go install ./cmd/uslibs
+
+    - name: Add
+      run: uslibs --name ${{ github.event.inputs.Name }} --url ${{ github.event.inputs.URL }} --description ${{ github.event.inputs.Description }}
+
+    - name: Update
+      run: uslibs list --markdown > README.md
+
+    - name: Commit and Push
+        uses: stefanzweifel/git-auto-commit-action@v4
+
