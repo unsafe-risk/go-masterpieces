@@ -88,10 +88,9 @@ func main() {
 			defer w.Flush()
 			w.WriteString("# Library List\n\n")
 			for _, lib := range libs {
-				w.WriteString(fmt.Sprintf("## %s\n\n", lib.Name))
-				w.WriteString(fmt.Sprintf("ID: %d\n\n", lib.ID))
+				w.WriteString(fmt.Sprintf("## %s#%d\n\n", lib.Name, lib.ID))
 				w.WriteString(fmt.Sprintf("URL: [%s](%s)\n\n", PureLink(lib.URL), lib.URL))
-				w.WriteString(fmt.Sprintf("Description: %s\n\n", lib.Description))
+				w.WriteString(fmt.Sprintf("%s\n\n", lib.Description))
 			}
 		}
 	case app.Del != nil:
