@@ -97,7 +97,7 @@ func AddLibrary(name, url, description string) error {
 	if err != nil {
 		return err
 	}
-
+	log.Println("Added library", id)
 	return nil
 }
 

@@ -31,11 +31,16 @@ jobs:
       run: go install ./cmd/uslibs
 
     - name: Add
-      run: uslibs --name "${{ github.event.inputs.Name }}" --url "${{ github.event.inputs.URL }}" --description "${{ github.event.inputs.Description }}"
+      run: uslibs add --name "${{ github.event.inputs.Name }}" --url "${{ github.event.inputs.URL }}" --description "${{ github.event.inputs.Description }}"
 
     - name: Update
       run: uslibs list --markdown > README.md
 
     - name: Commit and Push
-      uses: stefanzweifel/git-auto-commit-action@v4
+      run: |
+        git config --global user.email "55233766+lemon-mint@users.noreply.github.com"
+        git config --global user.name "lemon-mint"
+        git add .
+        git commit -m "Auto Update `date`"
+        git push 
 

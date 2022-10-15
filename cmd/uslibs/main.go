@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"encoding/json"
 	"fmt"
+	"log"
 	"net/url"
 	"os"
 	"strings"
@@ -98,5 +99,8 @@ func main() {
 		if err != nil {
 			panic(err)
 		}
+	default:
+		log.Println("App:", app)
+		panic("unknown command")
 	}
 }
