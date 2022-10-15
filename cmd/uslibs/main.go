@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/url"
 	"os"
+	"sort"
 	"strings"
 
 	"v8.run/go/broccoli"
@@ -87,8 +88,11 @@ func main() {
 			w := bufio.NewWriter(os.Stdout)
 			defer w.Flush()
 			w.WriteString("# Library List\n\n")
+			sort.Slice(libs, func(i, j int) bool {
+				return libs[i].ID < libs[j].ID
+			})
 			for _, lib := range libs {
-				w.WriteString(fmt.Sprintf("## %s#%d\n\n", lib.Name, lib.ID))
+				w.WriteString(fmt.Sprintf("## %d. %s\n\n", lib.ID, lib.Name))
 				w.WriteString(fmt.Sprintf("URL: [%s](%s)\n\n", PureLink(lib.URL), lib.URL))
 				w.WriteString(fmt.Sprintf("%s\n\n", lib.Description))
 			}
