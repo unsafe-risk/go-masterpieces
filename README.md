@@ -12,3 +12,9 @@ URL: [github.com/jackc/puddle](https://github.com/jackc/puddle)
 
 Generic resource pool for Go
 
+## kyleconroy/sqlc#2
+
+URL: [github.com/kyleconroy/sqlc](https://github.com/kyleconroy/sqlc)
+
+Generate type-safe code from SQL
+
