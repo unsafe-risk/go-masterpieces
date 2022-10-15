@@ -127,7 +127,7 @@ func main() {
 				w.WriteString(fmt.Sprintf("## %s\n\n", tag))
 				GetLink(tag)
 				for _, lib := range allTagsMap[tag] {
-					w.WriteString(fmt.Sprintf("* [%s](#%s)\n", FormatName(lib), GetLink(lib.URL)))
+					w.WriteString(fmt.Sprintf("* [%s](#%s)\n", FormatName(lib), GetLink(FormatName(lib))))
 				}
 				w.WriteString("\n\n")
 			}
