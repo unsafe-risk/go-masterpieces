@@ -85,8 +85,8 @@ func main() {
 		} else if app.List.MARKDOWN {
 			w := bufio.NewWriter(os.Stdout)
 			defer w.Flush()
+			w.WriteString("# Library List\n\n")
 			for _, lib := range libs {
-				w.WriteString("# Library List\n\n")
 				w.WriteString(fmt.Sprintf("## %s\n\n", lib.Name))
 				w.WriteString(fmt.Sprintf("ID: %d\n\n", lib.ID))
 				w.WriteString(fmt.Sprintf("URL: [%s](%s)\n\n", PureLink(lib.URL), lib.URL))
