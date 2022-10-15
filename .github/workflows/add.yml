@@ -35,9 +35,9 @@ jobs:
       run: go install ./cmd/uslibs
 
     - name: Add
-      run: uslibs add --name "${{ github.event.inputs.Name }}" \
-        --url "${{ github.event.inputs.URL }}" \
-        --description "${{ github.event.inputs.Description }}" \
+      run: uslibs add --name "${{ github.event.inputs.Name }}" 
+        --url "${{ github.event.inputs.URL }}"
+        --description "${{ github.event.inputs.Description }}"
         --tags "${{ github.event.inputs.Tags }}"
 
     - name: Update
