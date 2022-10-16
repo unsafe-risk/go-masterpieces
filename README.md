@@ -4,9 +4,15 @@ Masterpieces of Go programming language.
 
 # Tags
 
+## CODEGEN
+
+* [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
+
+
 ## DB
 
 * [00003. rueian/rueidis](#00003-rueianrueidis)
+* [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
 
 
 ## FAST
@@ -29,6 +35,11 @@ Masterpieces of Go programming language.
 ## REDIS
 
 * [00003. rueian/rueidis](#00003-rueianrueidis)
+
+
+## SQL
+
+* [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
 
 
 
@@ -60,6 +71,16 @@ URL: [github.com/jackc/puddle](https://github.com/jackc/puddle)
 Tags: [POOL](#pool), [FAST](#fast)
 
 Generic resource pool for Go
+
+
+
+## 00006. kyleconroy/sqlc
+
+URL: [github.com/kyleconroy/sqlc](https://github.com/kyleconroy/sqlc)
+
+Tags: [SQL](#sql), [DB](#db), [CODEGEN](#codegen)
+
+Generate type-safe code from SQL
 
 
 
