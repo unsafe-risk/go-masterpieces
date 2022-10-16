@@ -12,6 +12,7 @@ Masterpieces of Go programming language.
 ## CODEGEN
 
 * [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
+* [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
 
 
 ## DB
@@ -25,6 +26,7 @@ Masterpieces of Go programming language.
 * [00003. rueian/rueidis](#00003-rueianrueidis)
 * [00004. valyala/fastjson](#00004-valyalafastjson)
 * [00005. jackc/puddle](#00005-jackcpuddle)
+* [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
 
 
 ## JSON
@@ -45,6 +47,11 @@ Masterpieces of Go programming language.
 ## SEARCH
 
 * [00007. junegunn/fzf](#00007-junegunnfzf)
+
+
+## SERIALIZATION
+
+* [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
 
 
 ## SQL
@@ -103,6 +110,16 @@ URL: [github.com/junegunn/fzf](https://github.com/junegunn/fzf)
 Tags: [SEARCH](#search), [CLI](#cli)
 
 fzf is a general-purpose command-line fuzzy finder.
+
+
+
+## 00008. planetscale/vtprotobuf
+
+URL: [github.com/planetscale/vtprotobuf](https://github.com/planetscale/vtprotobuf)
+
+Tags: [CODEGEN](#codegen), [FAST](#fast), [SERIALIZATION](#serialization)
+
+A Protocol Buffers compiler that generates optimized marshaling & unmarshaling Go code for ProtoBuf APIv2
 
 
 
