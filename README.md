@@ -13,6 +13,7 @@ Masterpieces of Go programming language.
 
 * [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
 * [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
+* [00009. tinylib/msgp](#00009-tinylibmsgp)
 
 
 ## DB
@@ -27,6 +28,7 @@ Masterpieces of Go programming language.
 * [00004. valyala/fastjson](#00004-valyalafastjson)
 * [00005. jackc/puddle](#00005-jackcpuddle)
 * [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
+* [00009. tinylib/msgp](#00009-tinylibmsgp)
 
 
 ## JSON
@@ -52,6 +54,7 @@ Masterpieces of Go programming language.
 ## SERIALIZATION
 
 * [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
+* [00009. tinylib/msgp](#00009-tinylibmsgp)
 
 
 ## SQL
@@ -120,6 +123,16 @@ URL: [github.com/planetscale/vtprotobuf](https://github.com/planetscale/vtprotob
 Tags: [CODEGEN](#codegen), [FAST](#fast), [SERIALIZATION](#serialization)
 
 A Protocol Buffers compiler that generates optimized marshaling & unmarshaling Go code for ProtoBuf APIv2
+
+
+
+## 00009. tinylib/msgp
+
+URL: [github.com/tinylib/msgp](https://github.com/tinylib/msgp)
+
+Tags: [CODEGEN](#codegen), [FAST](#fast), [SERIALIZATION](#serialization)
+
+About A Go code generator for MessagePack
 
 
 
