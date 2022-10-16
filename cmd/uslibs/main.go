@@ -133,6 +133,7 @@ func main() {
 			}
 			w.WriteString("\n\n")
 
+			w.WriteString("# Masterpieces\n\n")
 			sort.Slice(libs, func(i, j int) bool {
 				return libs[i].ID < libs[j].ID
 			})
