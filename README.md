@@ -4,6 +4,11 @@ Masterpieces of Go programming language.
 
 # Tags
 
+## CLI
+
+* [00007. junegunn/fzf](#00007-junegunnfzf)
+
+
 ## CODEGEN
 
 * [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
@@ -35,6 +40,11 @@ Masterpieces of Go programming language.
 ## REDIS
 
 * [00003. rueian/rueidis](#00003-rueianrueidis)
+
+
+## SEARCH
+
+* [00007. junegunn/fzf](#00007-junegunnfzf)
 
 
 ## SQL
@@ -81,6 +91,16 @@ URL: [github.com/kyleconroy/sqlc](https://github.com/kyleconroy/sqlc)
 Tags: [SQL](#sql), [DB](#db), [CODEGEN](#codegen)
 
 Generate type-safe code from SQL
+
+
+
+## 00007. junegunn/fzf
+
+URL: [github.com/junegunn/fzf](https://github.com/junegunn/fzf)
+
+Tags: [SEARCH](#search), [CLI](#cli)
+
+fzf is a general-purpose command-line fuzzy finder.
 
 
 
