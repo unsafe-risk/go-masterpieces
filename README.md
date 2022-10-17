@@ -29,11 +29,17 @@ Masterpieces of Go programming language.
 * [00005. jackc/puddle](#00005-jackcpuddle)
 * [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
 * [00009. tinylib/msgp](#00009-tinylibmsgp)
+* [00010. rs/zerolog](#00010-rszerolog)
 
 
 ## JSON
 
 * [00004. valyala/fastjson](#00004-valyalafastjson)
+
+
+## LOG
+
+* [00010. rs/zerolog](#00010-rszerolog)
 
 
 ## POOL
@@ -60,6 +66,11 @@ Masterpieces of Go programming language.
 ## SQL
 
 * [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
+
+
+## ZEROALLOC
+
+* [00010. rs/zerolog](#00010-rszerolog)
 
 
 
@@ -133,6 +144,16 @@ URL: [github.com/tinylib/msgp](https://github.com/tinylib/msgp)
 Tags: [CODEGEN](#codegen), [FAST](#fast), [SERIALIZATION](#serialization)
 
 About A Go code generator for MessagePack
+
+
+
+## 00010. rs/zerolog
+
+URL: [github.com/rs/zerolog](https://github.com/rs/zerolog)
+
+Tags: [LOG](#log), [FAST](#fast), [ZEROALLOC](#zeroalloc)
+
+Zero Allocation JSON Logger
 
 
 
