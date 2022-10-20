@@ -4,6 +4,11 @@ Masterpieces of Go programming language.
 
 # Tags
 
+## CACHE
+
+* [00012. golang/groupcache](#00012-golanggroupcache)
+
+
 ## CLI
 
 * [00007. junegunn/fzf](#00007-junegunnfzf)
@@ -20,6 +25,12 @@ Masterpieces of Go programming language.
 
 * [00003. rueian/rueidis](#00003-rueianrueidis)
 * [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
+* [00012. golang/groupcache](#00012-golanggroupcache)
+
+
+## DISTRIBUTED SYSTEM
+
+* [00012. golang/groupcache](#00012-golanggroupcache)
 
 
 ## FAST
@@ -154,6 +165,16 @@ URL: [github.com/rs/zerolog](https://github.com/rs/zerolog)
 Tags: [LOG](#log), [FAST](#fast), [ZEROALLOC](#zeroalloc)
 
 Zero Allocation JSON Logger
+
+
+
+## 00012. golang/groupcache
+
+URL: [github.com/golang/groupcache](https://github.com/golang/groupcache)
+
+Tags: [CACHE](#cache), [DISTRIBUTED SYSTEM](#distributed-system), [DB](#db)
+
+groupcache is a caching and cache-filling library, intended as a replacement for memcached in many cases.
 
 
 
