@@ -8,6 +8,7 @@ Masterpieces of Go programming language.
 
 * [00012. golang/groupcache](#00012-golanggroupcache)
 * [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
+* [00014. allegro/bigcache](#00014-allegrobigcache)
 
 
 ## CLI
@@ -43,11 +44,13 @@ Masterpieces of Go programming language.
 * [00009. tinylib/msgp](#00009-tinylibmsgp)
 * [00010. rs/zerolog](#00010-rszerolog)
 * [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
+* [00014. allegro/bigcache](#00014-allegrobigcache)
 
 
 ## GC
 
 * [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
+* [00014. allegro/bigcache](#00014-allegrobigcache)
 
 
 ## JSON
@@ -192,6 +195,16 @@ URL: [github.com/VictoriaMetrics/fastcache](https://github.com/VictoriaMetrics/f
 Tags: [CACHE](#cache), [FAST](#fast), [GC](#gc)
 
 Fast thread-safe inmemory cache for big number of entries in Go. Minimizes GC overhead
+
+
+
+## 00014. allegro/bigcache
+
+URL: [github.com/allegro/bigcache](https://github.com/allegro/bigcache)
+
+Tags: [CACHE](#cache), [FAST](#fast), [GC](#gc)
+
+Efficient cache for gigabytes of data written in Go.
 
 
 
