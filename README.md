@@ -7,6 +7,7 @@ Masterpieces of Go programming language.
 ## CACHE
 
 * [00012. golang/groupcache](#00012-golanggroupcache)
+* [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
 
 
 ## CLI
@@ -41,6 +42,12 @@ Masterpieces of Go programming language.
 * [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
 * [00009. tinylib/msgp](#00009-tinylibmsgp)
 * [00010. rs/zerolog](#00010-rszerolog)
+* [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
+
+
+## GC
+
+* [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
 
 
 ## JSON
@@ -175,6 +182,16 @@ URL: [github.com/golang/groupcache](https://github.com/golang/groupcache)
 Tags: [CACHE](#cache), [DISTRIBUTED SYSTEM](#distributed-system), [DB](#db)
 
 groupcache is a caching and cache-filling library, intended as a replacement for memcached in many cases.
+
+
+
+## 00013. VictoriaMetrics/fastcache
+
+URL: [github.com/VictoriaMetrics/fastcache](https://github.com/VictoriaMetrics/fastcache)
+
+Tags: [CACHE](#cache), [FAST](#fast), [GC](#gc)
+
+Fast thread-safe inmemory cache for big number of entries in Go. Minimizes GC overhead
 
 
 
