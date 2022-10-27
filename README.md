@@ -6,106 +6,106 @@ Masterpieces of Go programming language.
 
 ## CACHE
 
-* [00012. golang/groupcache](#00012-golanggroupcache)
-* [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
-* [00014. allegro/bigcache](#00014-allegrobigcache)
+* [0x0C. golang/groupcache](#0x0c-golanggroupcache)
+* [0x0D. VictoriaMetrics/fastcache](#0x0d-victoriametricsfastcache)
+* [0x0E. allegro/bigcache](#0x0e-allegrobigcache)
 
 
 ## CLI
 
-* [00007. junegunn/fzf](#00007-junegunnfzf)
+* [0x07. junegunn/fzf](#0x07-junegunnfzf)
 
 
 ## CODEGEN
 
-* [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
-* [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
-* [00009. tinylib/msgp](#00009-tinylibmsgp)
+* [0x06. kyleconroy/sqlc](#0x06-kyleconroysqlc)
+* [0x08. planetscale/vtprotobuf](#0x08-planetscalevtprotobuf)
+* [0x09. tinylib/msgp](#0x09-tinylibmsgp)
 
 
 ## DB
 
-* [00003. rueian/rueidis](#00003-rueianrueidis)
-* [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
-* [00012. golang/groupcache](#00012-golanggroupcache)
-* [00015. dgraph-io/badger](#00015-dgraph-iobadger)
+* [0x03. rueian/rueidis](#0x03-rueianrueidis)
+* [0x06. kyleconroy/sqlc](#0x06-kyleconroysqlc)
+* [0x0C. golang/groupcache](#0x0c-golanggroupcache)
+* [0x0F. dgraph-io/badger](#0x0f-dgraph-iobadger)
 
 
 ## DISTRIBUTED SYSTEM
 
-* [00012. golang/groupcache](#00012-golanggroupcache)
+* [0x0C. golang/groupcache](#0x0c-golanggroupcache)
 
 
 ## FAST
 
-* [00003. rueian/rueidis](#00003-rueianrueidis)
-* [00004. valyala/fastjson](#00004-valyalafastjson)
-* [00005. jackc/puddle](#00005-jackcpuddle)
-* [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
-* [00009. tinylib/msgp](#00009-tinylibmsgp)
-* [00010. rs/zerolog](#00010-rszerolog)
-* [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
-* [00014. allegro/bigcache](#00014-allegrobigcache)
-* [00015. dgraph-io/badger](#00015-dgraph-iobadger)
+* [0x03. rueian/rueidis](#0x03-rueianrueidis)
+* [0x04. valyala/fastjson](#0x04-valyalafastjson)
+* [0x05. jackc/puddle](#0x05-jackcpuddle)
+* [0x08. planetscale/vtprotobuf](#0x08-planetscalevtprotobuf)
+* [0x09. tinylib/msgp](#0x09-tinylibmsgp)
+* [0x0A. rs/zerolog](#0x0a-rszerolog)
+* [0x0D. VictoriaMetrics/fastcache](#0x0d-victoriametricsfastcache)
+* [0x0E. allegro/bigcache](#0x0e-allegrobigcache)
+* [0x0F. dgraph-io/badger](#0x0f-dgraph-iobadger)
 
 
 ## GC
 
-* [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
-* [00014. allegro/bigcache](#00014-allegrobigcache)
+* [0x0D. VictoriaMetrics/fastcache](#0x0d-victoriametricsfastcache)
+* [0x0E. allegro/bigcache](#0x0e-allegrobigcache)
 
 
 ## JSON
 
-* [00004. valyala/fastjson](#00004-valyalafastjson)
+* [0x04. valyala/fastjson](#0x04-valyalafastjson)
 
 
 ## KV
 
-* [00015. dgraph-io/badger](#00015-dgraph-iobadger)
+* [0x0F. dgraph-io/badger](#0x0f-dgraph-iobadger)
 
 
 ## LOG
 
-* [00010. rs/zerolog](#00010-rszerolog)
+* [0x0A. rs/zerolog](#0x0a-rszerolog)
 
 
 ## POOL
 
-* [00005. jackc/puddle](#00005-jackcpuddle)
+* [0x05. jackc/puddle](#0x05-jackcpuddle)
 
 
 ## REDIS
 
-* [00003. rueian/rueidis](#00003-rueianrueidis)
+* [0x03. rueian/rueidis](#0x03-rueianrueidis)
 
 
 ## SEARCH
 
-* [00007. junegunn/fzf](#00007-junegunnfzf)
+* [0x07. junegunn/fzf](#0x07-junegunnfzf)
 
 
 ## SERIALIZATION
 
-* [00008. planetscale/vtprotobuf](#00008-planetscalevtprotobuf)
-* [00009. tinylib/msgp](#00009-tinylibmsgp)
+* [0x08. planetscale/vtprotobuf](#0x08-planetscalevtprotobuf)
+* [0x09. tinylib/msgp](#0x09-tinylibmsgp)
 
 
 ## SQL
 
-* [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
+* [0x06. kyleconroy/sqlc](#0x06-kyleconroysqlc)
 
 
 ## ZEROALLOC
 
-* [00010. rs/zerolog](#00010-rszerolog)
+* [0x0A. rs/zerolog](#0x0a-rszerolog)
 
 
 
 
 # Masterpieces
 
-## 00003. rueian/rueidis
+## 0x03. rueian/rueidis
 
 URL: [github.com/rueian/rueidis](https://github.com/rueian/rueidis)
 
@@ -115,7 +115,7 @@ A fast Golang Redis client that supports Client Side Caching, Auto Pipelining, G
 
 
 
-## 00004. valyala/fastjson
+## 0x04. valyala/fastjson
 
 URL: [github.com/valyala/fastjson](https://github.com/valyala/fastjson)
 
@@ -125,7 +125,7 @@ Fast JSON parser and validator for Go. No custom structs, no code generation, no
 
 
 
-## 00005. jackc/puddle
+## 0x05. jackc/puddle
 
 URL: [github.com/jackc/puddle](https://github.com/jackc/puddle)
 
@@ -135,7 +135,7 @@ Generic resource pool for Go
 
 
 
-## 00006. kyleconroy/sqlc
+## 0x06. kyleconroy/sqlc
 
 URL: [github.com/kyleconroy/sqlc](https://github.com/kyleconroy/sqlc)
 
@@ -145,7 +145,7 @@ Generate type-safe code from SQL
 
 
 
-## 00007. junegunn/fzf
+## 0x07. junegunn/fzf
 
 URL: [github.com/junegunn/fzf](https://github.com/junegunn/fzf)
 
@@ -155,7 +155,7 @@ fzf is a general-purpose command-line fuzzy finder.
 
 
 
-## 00008. planetscale/vtprotobuf
+## 0x08. planetscale/vtprotobuf
 
 URL: [github.com/planetscale/vtprotobuf](https://github.com/planetscale/vtprotobuf)
 
@@ -165,7 +165,7 @@ A Protocol Buffers compiler that generates optimized marshaling & unmarshaling G
 
 
 
-## 00009. tinylib/msgp
+## 0x09. tinylib/msgp
 
 URL: [github.com/tinylib/msgp](https://github.com/tinylib/msgp)
 
@@ -175,7 +175,7 @@ About A Go code generator for MessagePack
 
 
 
-## 00010. rs/zerolog
+## 0x0A. rs/zerolog
 
 URL: [github.com/rs/zerolog](https://github.com/rs/zerolog)
 
@@ -185,7 +185,7 @@ Zero Allocation JSON Logger
 
 
 
-## 00012. golang/groupcache
+## 0x0C. golang/groupcache
 
 URL: [github.com/golang/groupcache](https://github.com/golang/groupcache)
 
@@ -195,7 +195,7 @@ groupcache is a caching and cache-filling library, intended as a replacement for
 
 
 
-## 00013. VictoriaMetrics/fastcache
+## 0x0D. VictoriaMetrics/fastcache
 
 URL: [github.com/VictoriaMetrics/fastcache](https://github.com/VictoriaMetrics/fastcache)
 
@@ -205,7 +205,7 @@ Fast thread-safe inmemory cache for big number of entries in Go. Minimizes GC ov
 
 
 
-## 00014. allegro/bigcache
+## 0x0E. allegro/bigcache
 
 URL: [github.com/allegro/bigcache](https://github.com/allegro/bigcache)
 
@@ -215,7 +215,7 @@ Efficient cache for gigabytes of data written in Go.
 
 
 
-## 00015. dgraph-io/badger
+## 0x0F. dgraph-io/badger
 
 URL: [github.com/dgraph-io/badger](https://github.com/dgraph-io/badger)
 

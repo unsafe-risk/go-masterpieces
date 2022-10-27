@@ -61,7 +61,7 @@ func PureLink(u string) string {
 }
 
 func FormatName(lib Library) string {
-	return fmt.Sprintf("%05d. %s", lib.ID, lib.Name)
+	return fmt.Sprintf("0x%02X. %s", lib.ID, lib.Name)
 }
 
 var Links = map[string]string{}
