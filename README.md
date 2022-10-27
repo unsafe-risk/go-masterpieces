@@ -28,6 +28,7 @@ Masterpieces of Go programming language.
 * [00003. rueian/rueidis](#00003-rueianrueidis)
 * [00006. kyleconroy/sqlc](#00006-kyleconroysqlc)
 * [00012. golang/groupcache](#00012-golanggroupcache)
+* [00015. dgraph-io/badger](#00015-dgraph-iobadger)
 
 
 ## DISTRIBUTED SYSTEM
@@ -45,6 +46,7 @@ Masterpieces of Go programming language.
 * [00010. rs/zerolog](#00010-rszerolog)
 * [00013. VictoriaMetrics/fastcache](#00013-victoriametricsfastcache)
 * [00014. allegro/bigcache](#00014-allegrobigcache)
+* [00015. dgraph-io/badger](#00015-dgraph-iobadger)
 
 
 ## GC
@@ -56,6 +58,11 @@ Masterpieces of Go programming language.
 ## JSON
 
 * [00004. valyala/fastjson](#00004-valyalafastjson)
+
+
+## KV
+
+* [00015. dgraph-io/badger](#00015-dgraph-iobadger)
 
 
 ## LOG
@@ -205,6 +212,16 @@ URL: [github.com/allegro/bigcache](https://github.com/allegro/bigcache)
 Tags: [CACHE](#cache), [FAST](#fast), [GC](#gc)
 
 Efficient cache for gigabytes of data written in Go.
+
+
+
+## 00015. dgraph-io/badger
+
+URL: [github.com/dgraph-io/badger](https://github.com/dgraph-io/badger)
+
+Tags: [DB](#db), [FAST](#fast), [KV](#kv)
+
+Fast key-value DB in Go.
 
 
 
