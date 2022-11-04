@@ -23,6 +23,11 @@ Masterpieces of Go programming language.
 * [0x09. tinylib/msgp](#0x09-tinylibmsgp)
 
 
+## DATA STRUCTURE
+
+* [0x10. dgraph-io/sroar](#0x10-dgraph-iosroar)
+
+
 ## DB
 
 * [0x03. rueian/rueidis](#0x03-rueianrueidis)
@@ -47,6 +52,7 @@ Masterpieces of Go programming language.
 * [0x0D. VictoriaMetrics/fastcache](#0x0d-victoriametricsfastcache)
 * [0x0E. allegro/bigcache](#0x0e-allegrobigcache)
 * [0x0F. dgraph-io/badger](#0x0f-dgraph-iobadger)
+* [0x10. dgraph-io/sroar](#0x10-dgraph-iosroar)
 
 
 ## GC
@@ -89,6 +95,7 @@ Masterpieces of Go programming language.
 
 * [0x08. planetscale/vtprotobuf](#0x08-planetscalevtprotobuf)
 * [0x09. tinylib/msgp](#0x09-tinylibmsgp)
+* [0x10. dgraph-io/sroar](#0x10-dgraph-iosroar)
 
 
 ## SQL
@@ -222,6 +229,16 @@ URL: [github.com/dgraph-io/badger](https://github.com/dgraph-io/badger)
 Tags: [DB](#db), [FAST](#fast), [KV](#kv)
 
 Fast key-value DB in Go.
+
+
+
+## 0x10. dgraph-io/sroar
+
+URL: [github.com/dgraph-io/sroar](https://github.com/dgraph-io/sroar)
+
+Tags: [DATA STRUCTURE](#data-structure), [FAST](#fast), [SERIALIZATION](#serialization)
+
+Serialized Roaring Bitmaps
 
 
 
