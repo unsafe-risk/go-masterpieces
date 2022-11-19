@@ -26,6 +26,7 @@ Masterpieces of Go programming language.
 ## DATA STRUCTURE
 
 * [0x10. dgraph-io/sroar](#0x10-dgraph-iosroar)
+* [0x11. Workiva/go-datastructures](#0x11-workivago-datastructures)
 
 
 ## DB
@@ -239,6 +240,16 @@ URL: [github.com/dgraph-io/sroar](https://github.com/dgraph-io/sroar)
 Tags: [DATA STRUCTURE](#data-structure), [FAST](#fast), [SERIALIZATION](#serialization)
 
 Serialized Roaring Bitmaps
+
+
+
+## 0x11. Workiva/go-datastructures
+
+URL: [github.com/Workiva/go-datastructures](https://github.com/Workiva/go-datastructures)
+
+Tags: [DATA STRUCTURE](#data-structure)
+
+A collection of useful, performant, and threadsafe Go datastructures.
 
 
 
