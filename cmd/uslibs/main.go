@@ -14,11 +14,12 @@ import (
 )
 
 type App struct {
-	_    struct{} `version:"0.0.1" command:"uslibs" about:"Unsafe libraries"`
-	DB   string   `flag:"db" default:"./list" about:"Database path" required:"true"`
-	Add  *AddCmd  `subcommand:"add"`
-	Del  *DelCmd  `subcommand:"del"`
-	List *ListCmd `subcommand:"list"`
+	_    struct{}   `version:"0.0.1" command:"uslibs" about:"Unsafe libraries"`
+	DB   string     `flag:"db" default:"./list" about:"Database path" required:"true"`
+	Add  *AddCmd    `subcommand:"add"`
+	Del  *DelCmd    `subcommand:"del"`
+	List *ListCmd   `subcommand:"list"`
+	Back *BackupCmd `subcommand:"backup"`
 }
 
 type AddCmd struct {
@@ -39,6 +40,10 @@ type ListCmd struct {
 	Limit    int      `flag:"limit" default:"-1" required:"true" about:"Limit the number of results"`
 	JSON     bool     `flag:"json" about:"Output as JSON"`
 	MARKDOWN bool     `flag:"markdown" about:"Output as Markdown"`
+}
+
+type BackupCmd struct {
+	_ struct{} `command:"backup" about:"Backup the database"`
 }
 
 func PureLink(u string) string {
@@ -159,6 +164,11 @@ func main() {
 		}
 	case app.Del != nil:
 		err := DeleteLibrary(app.Del.ID)
+		if err != nil {
+			panic(err)
+		}
+	case app.Back != nil:
+		err := BackupDB()
 		if err != nil {
 			panic(err)
 		}

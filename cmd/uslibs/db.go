@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"runtime"
 	"strconv"
 	"strings"
 
@@ -31,6 +32,10 @@ func initDB(path string) {
 
 func closeDB() {
 	err := IDSeq.Release()
+	if err != nil {
+		log.Println(err)
+	}
+	err = db.Flatten(runtime.GOMAXPROCS(-1))
 	if err != nil {
 		log.Println(err)
 	}
